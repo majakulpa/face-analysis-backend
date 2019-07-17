@@ -9,7 +9,7 @@ const signup = require("./controllers/signup");
 const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const image = require("./controllers/image");
-const compression = require("compression");
+
 //console.log(process.env.NODE_ENV);
 
 const db = knex({
@@ -26,7 +26,6 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(compression());
 
 app.get("/", (req, res) => {
   res.send("it is working");
